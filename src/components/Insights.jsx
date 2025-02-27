@@ -1,6 +1,7 @@
 import { delay } from 'motion'
 import React from 'react'
 import { SiCachet, SiDatabricks, SiGoogleassistant } from 'react-icons/si'
+import { motion } from 'motion/react'
 
 const Insights = () => {
 
@@ -37,31 +38,47 @@ const Insights = () => {
 
   return (
     <div
-      className='w-4/5 m-auto py-20 flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0 '>
+      className='w-4/5 m-auto py-0 flex flex-col md:flex-row justify-between items-center   space-y-10 md:space-y-0 '>
       <div className='md:w-1/2 space-y-4  '>
-        <h2 className='text-2xl font-bold'>
+        <motion.h2
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className='text-2xl font-bold'>
           Industry Insights
-        </h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sequi
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sequi
           , ipsa reiciendis maiores officia exercitationem, velit praesentium
           consectetur blanditiis laboriosam, voluptates ducimus id dolorem ipsam.
           Quia quaerat reprehenderit reiciendis sed eius assumenda. Odio vel quod
           modi provident nulla, nostrum quas laboriosam sed dolores dolorem esse
-          veniam, reiciendis quo repudiandae rem natus eos inventore totam dolor.</p>
-      </div>
-      <div className='flex items-center space-x-2'>
-        <img className='w-22 h-22 rounded-full border-2'
-          src="https://randomuser.me/api/portraits/men/1.jpg" alt="" />
-        <div>
-          <h1 className='font-bold text-lg'>Jibran Khalil</h1>
-          <p className='text-sm text-gray-400'>CEO Founder</p>
+          veniam, reiciendis quo repudiandae rem natus eos inventore totam dolor.
+        </motion.p>
+
+        <div className='flex items-center space-x-2'>
+          <img className='w-15 h-15 rounded-full border-2'
+            src="https://randomuser.me/api/portraits/men/1.jpg" alt="" />
+          <div>
+            <h1 className='font-bold text-lg'>Jibran Khalil</h1>
+            <p className='text-sm text-gray-400'>CEO Founder</p>
+          </div>
         </div>
       </div>
 
       <div
         className='md:w-1/2 flex flex-col md:flex-row md:space-x-5 space-y-5 md:space-y-0'>
         {insightsData.map((insight, index) => (
-          <div key={index} className='w-full p-4 border-4 border-gray-100 rounded-xl space-y-4'>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.5 }}
+            variants={cardVarients}
+
+            key={index}
+            className='w-full p-4 border-4 border-gray-100 rounded-xl space-y-4'>
             <div className='flex justify-between'>
               <div className='space-y-2'>
                 <button className='p-3 rounded-full bg-violet-300 text-violet-800' >{insight.icon()}</button>
@@ -70,11 +87,11 @@ const Insights = () => {
               <p>{insight.date}</p>
             </div>
             <p className='text-lg leading-loose'>{insight.description}</p>
-          </div>
+          </motion.div>
         ))}
 
       </div>
-    </div>
+    </div >
   )
 }
 

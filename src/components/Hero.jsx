@@ -100,7 +100,7 @@ const Hero = () => {
           whileInView="visible"
           viewport={{ amount: 0.5 }}
           variants={imageVarient}
-          src="/hero.svg" className='w-full' />
+          src="/hero1.svg" className='w-full' />
       </div>
     </div>
   )

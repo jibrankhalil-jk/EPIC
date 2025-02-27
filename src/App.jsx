@@ -3,7 +3,8 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Insights from './components/Insights'
 import NavBar from './components/Navbar'
-import Price from './components/Price'
+import Pricing from './components/Pricing'
+import Stats from './components/Stats'
 import Testmonials from './components/Testmonials'
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
         <NavBar />
         <Hero />
         <Insights />
+        <Stats />
+        <Pricing />
         <Testmonials />
-        <Price />
         <Faqs />
         <Footer />
       </div>
