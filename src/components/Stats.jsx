@@ -20,7 +20,8 @@ const Stats = () => {
         <div className='py-20 bg-white/50'>
             <div className="w-4/5 m-auto flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
                 <div className=' w-full md:w-1/3'>
-                    <motion.img initial="hidden"
+                    <motion.img
+                        initial="hidden"
                         whileInView="visible"
                         viewport={{ amount: 0.5 }}
                         variants={imageVarient}

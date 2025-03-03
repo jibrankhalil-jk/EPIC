@@ -3,7 +3,6 @@ import { IoPlay } from 'react-icons/io5'
 import { motion } from "motion/react"
 
 const Hero = () => {
-
   const textVariant = {
     hidden: { opacity: 0, x: 50 },
     visible: {
