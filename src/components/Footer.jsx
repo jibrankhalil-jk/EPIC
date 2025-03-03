@@ -19,7 +19,6 @@ const Footer = () => {
       viewport={{ amount: 0.5 }}
       variants={footerVarient}
       className='py-20'>
-
       <div className='w-4/5 m-auto grid md:grid-cols-4 gap-6 px-4'>
         <div>
           <h2 className='text-xl font-bold mb-2'>About Us</h2>

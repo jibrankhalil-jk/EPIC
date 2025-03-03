@@ -34,7 +34,7 @@ const Pricing = () => {
           whileInView="visible"
           viewport={{ amount: 0.5 }}
           variants={imageVarient}
-          src="/pricing.svg" alt="" className='w-full' />
+          src="pricing.svg" alt="" className='w-full' />
       </div>
     </div>
   )

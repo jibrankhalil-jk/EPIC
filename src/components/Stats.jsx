@@ -25,7 +25,7 @@ const Stats = () => {
                         whileInView="visible"
                         viewport={{ amount: 0.5 }}
                         variants={imageVarient}
-                        src="/stats.svg" alt="" className='w-full' />
+                        src="stats.svg" alt="" className='w-full' />
                 </div>
                 <div className='md:w-1/2 space-y-8'>
                     <h1 className='text-4xl md:text-6xl font-bold'>Over 30,000</h1>
